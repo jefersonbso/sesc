@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesc</title>
+    <link rel="stylesheet" href="projeto.css">
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom right, white, #e2e4e6);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black; /* Cor do texto */
+            align-items: center;
+            height: 100vh;
+            max-width: 1080px;
+            max-height: 1920px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            size: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            color: #004a8d;
+            animation: shake 10s ease-in-out infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #f6be00;
+            color: #004a8d;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <header>
+        <img src="/images/SESC - LOGO HORIZONTAL.png" alt="Logo do Sesc" class="logo">
+    </header>
+</head>
+<body>
+    <h1>Vem ser Sesc</h1>
+    <a href="sesc.html" class="button">Comece por aqui!</a>
+</body>
+</html>

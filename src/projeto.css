@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 768px;
+    max-height: 1360px;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+header nav ul li a {
+    color: #004a8d; /* Cor dos links */
+    text-decoration: none;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    
+    
+}
+h1{
+    color: #004a8d;
+    animation: shake 10s ease-in-out infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+h2{
+    color: #004a8d;
+    text-align: center;
+}
+p{
+    color: #004a8d;
+    text-align: center;
+}
+.logo {
+    width: 100%;
+    max-width: 450px;
+}
+video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    cursor: pointer;
+}
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 1s;
+}
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.play-button::before {
+    content: '';
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent white;
+}
+button {
+    background-color: #f6be00;
+    color:#004a8d;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.jump {
+    animation: jump 1s ease-in-out;
+}
+
+footer {
+    width: 100%;
+    max-width: 1920px;
+    background-color: #f6be00;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+}
+
+.footer-logos div {
+    text-align: center;
+}
+
+.footer-logos img {
+    width: 90px;
+    height: auto;
+}
+
+.footer-logos span {
+    display: block;
+    color: #004a8d;
+    margin-bottom: 10px;
+}

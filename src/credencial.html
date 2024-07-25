@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo 1</title>
+    <link rel="stylesheet" href="projeto.css">
+    <style>
+  body {
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom right, white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black; /* Cor do texto */
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+header {
+    background-color: white;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+header img {
+    height: 50px; /* Ajuste conforme necessário */
+    vertical-align: middle;
+}
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #f6be00;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+button:hover {
+    background-color: #d4a600;
+}
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="/images/SESC - LOGO HORIZONTAL.png" alt="logosesc">
+        <h1>Vem ser Sesc</h1>
+        <nav>
+            <ul>
+                <li><a href="academia.html">Academia</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="Escola.html">Escola</a></li>
+                <li><a href="hotel.html">Hotel</a></li>
+                <li><a href="restaurante.html">Restaurante</a></li>            
+                <li><a href="Vida.html">Sesc</a></li>
+                <li><a href="index.html">Início</a></li>
+                <!-- Adicione mais links conforme necessário -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section>
+            <h2>Junte-se ao Sesc</h2>
+            <p>
+                Junte-se ao Sesc e descubra um mundo de possibilidades para enriquecer sua vida! 
+            </p>
+          
+            <div class="video-container">
+                <video id="video1">
+                    <source src="/Expoacre 2024/Credenciamento Sesc.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <div class="play-button" id="playButton"></div>
+            </div>
+        </section>
+        
+        <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-logos">
+            <div>
+                <span>Site Sesc</span>
+                <img src="/images/sitesescqr.png" alt="Logo 1">
+            </div>
+            <div>
+                <span>Atendimento</span>
+                <img src="/images/whatsappqr.png" alt="Logo 2">
+            </div>
+            <div>
+                <span>Instagram</span>
+                <img src="/images/instagramqr.png" alt="Logo 3">
+            </div>
+            <div>
+                <span>Credencial</span>
+                <img src="/images/credencialqr.png" alt="Logo 4">
+            </div>
+            <div>
+                <span>Reservas</span>
+                <img src="/images/reservaqr.png" alt="Logo 5">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const video = document.getElementById('video1');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            if (video.paused) {
+                video.requestFullscreen();
+                video.play();
+                playButton.style.display = 'none';
+            }
+        });
+
+        video.addEventListener('ended', () => {
+            document.exitFullscreen();
+            video.currentTime = 0;
+            video.pause();
+            playButton.style.display = 'flex';
+        });
+
+        video.addEventListener('click', () => {
+            if (!video.paused) {
+                video.pause();
+                playButton.style.display = 'flex';
+                document.exitFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
